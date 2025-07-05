@@ -30,11 +30,32 @@
 
    <!----------------------------------------------->
     <!-- AFFICHAGE DU MESSAGE -------------->
+
+    <!-- Titre -->
+    <div class="title_container">
+      <h1 class="page-title">{POST_SUBJECT}</h1>
+    </div>
     <div class="container">
 
-        <!-- Tire du message -->
-        <h1 class="page-title">{POST_SUBJECT}</h1>
+ <!-- MP container (profil + message) -->
+    <div class="mp-container">
 
+<!-- Profil de l'expéditeur -->
+            <div class="message_profil">
+
+                <!-- avatar -->
+                {AVATAR_FROM}<br /><br />
+
+                <!-- pseudo -->
+                <div class="message_from">
+                    {MESSAGE_FROM}
+                    <!-- BEGIN switch_user_contact -->
+                    {PROFILE_IMG}
+                    <!-- END switch_user_contact -->
+              </div>
+            </div>
+
+<div class="message-bg">
         <!-- Conteneur du message -->
         <div class="message">
 
@@ -59,27 +80,14 @@
 
             </div>
 
-            <!-- Profil de l'expéditeur -->
-            <div class="message_profil">
-
-                <!-- avatar -->
-                {AVATAR_FROM}<br /><br />
-
-                <!-- pseudo -->
-                <div class="message_from">
-                    {MESSAGE_FROM}
-                    <!-- BEGIN switch_user_contact -->
-                    {PROFILE_IMG}
-                    <!-- END switch_user_contact -->
-              </div>
-            </div>
-
             <!-- contenu du MP -->
             <div class="message_content postbody content">
                 {MESSAGE}
             </div>
+  </div>
 
         </div>
+</div>
         <!-- Fin du conteneur message -->
 
       
