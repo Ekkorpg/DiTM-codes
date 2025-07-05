@@ -17,10 +17,10 @@
 <!----------------------------------------------->
 <!-- LISTE DES MEMBRES -------------->
 
-<div class="container">
+<!-- Titre de la liste des membres -->
+<div class="title_container"><h1 class="page-title">{PAGE_TITLE}</h1></div>
 
-    <!-- Titre de la liste des membres -->
-    <h1 class="page-title">{PAGE_TITLE}</h1>
+<div class="container">
 
     <!-- Liste des membres -->
     <div class="userlist">
@@ -29,34 +29,31 @@
         <!-- BEGIN memberrow -->
         <div class="userlist_profil">
 
-            <!-- Avatar -->
-            <div class="userlist_avatar">
-                {memberrow.AVATAR_IMG}
-            </div>
-
-            <!-- Conteneurs des informations de membre -->
-            <div class="userlist_details">
-
                 <!-- Pseudo -->
                 <span class="userlist_pseudo">
                     <a href="{memberrow.U_VIEWPROFILE}">{memberrow.USERNAME}</a>
                 </span>
 
+            <!-- Ligne avec avatar + infos -->
+  <div class="userlist_content">
+    <div class="userlist_avatar">
+      {memberrow.AVATAR_IMG}
+    </div>
+    <div class="userlist_details">
                 <!-- Champs de profil -->
                 <div class="userlist_infos">
                     {L_JOINED}: {memberrow.JOINED}<br />
                     {L_VISITED}: {memberrow.LASTVISIT}<br />
                     {L_POSTS}: {memberrow.POSTS}<br />
                 </div>
-
                 <!-- Lien de contact -->
                 <div class="userlist_contact right">
                     {memberrow.PM_IMG}&nbsp;
                     {memberrow.WWW_IMG}
                 </div>
             </div>
-
-        </div>
+  </div>
+</div>
         <!-- END memberrow -->
         <!-- Fin d'un profil -->
 
