@@ -18,6 +18,7 @@
   --color5: #97acd0;
   --color6: #fff;
   --colortitre: #fff;
+  --coloracc: #cba6de;
   --transparent: #f0f3fd;
   --gradient: linear-gradient(to right, var(--color1), var(--color2), var(--color4)50%, var(--color5));
   --shadow: 0 0 5px gray;
@@ -77,6 +78,7 @@
   --color6: #354b4f;
   --color5: #cec6c4;
   --color4: #fff;
+  --coloracc: #453a47;
   --colortitre: #d3d3dd;
   --transparent: #33373c;
   --gradient: linear-gradient(to right, var(--color1), var(--color3), var(--color1));
@@ -282,7 +284,7 @@ body {
 /* Conteneur de toutes les sous-sections
  * comme les encadrés d'options, de rappel, etc... */
 .panel {
-  background: var(--neutral);
+  background: var(--color6);
   border: var(--border);
   border-radius: 5px;
   padding: 10px;
@@ -1637,14 +1639,14 @@ a.groups:last-child {
 
 /* Image du sujet */
 .topicslist-img {
-    width: 50px;
-    height: 58px;
+    width: 65px;
+    height: 65px;
     background: var(--color6);
     border-radius: 5px;
 }
 
 .topicslist-img img{
-  margin-top:4px;
+
 }
 
 .topicslist_infos {
@@ -1687,16 +1689,16 @@ a.groups:last-child {
 }
 
 .topicslist-avatar-lastpost {
-  height: 57px;
+ 
 }
 
 .topicslist-avatar-lastpost img {
     object-fit: cover;
     object-position: center;
-    width: 50px;
-    height: 58px;
-    background: var(--color5);
+    height: 65px;
+    background: var(--color6);
     border-radius: 5px;
+    padding: 2px;
 }
 
 .topicslist-lastpost {
@@ -1704,6 +1706,8 @@ a.groups:last-child {
     padding: 10px;
     border-radius: 5px;
     width: 187px;
+    height: 65px;
+    font-size: 13px;
 }
 
 .topicslist-description {
@@ -2419,27 +2423,53 @@ blockquote cite a {
 }
 
 .userlist_profil {
-  display: grid;
-  grid-template-columns: 95px auto;
-  grid-gap: 10px;
-  padding: 10px;
-  background: var(--neutral);
+  background: var(--color6);
   border-radius: 5px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* permet que la barre pseudo prenne toute la largeur */
 }
 
-.userlist_avatar {}
+.userlist_avatar {
+  z-index: 2;
+  position: relative;
+  margin-top: -30px; /* Permet à l’avatar de chevaucher la barre du pseudo */
+}
 
 .userlist_avatar img {
   width: 75px;
-  height: 120px;
+  height: 130px;
+  margin-top: -10px;
   object-fit: cover;
   object-position: center;
+  border-radius: 10px;
+  border: 6px solid var(--coloracc);
 }
 
-.userlist_details {}
+.userlist_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 .userlist_pseudo {
+  background: var(--coloracc);
   font-size: var(--medium-size);
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.userlist_content {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
 }
 
 .userlist_infos {}
@@ -2468,7 +2498,7 @@ blockquote cite a {
 
 /* Affichage d'un MP dans la liste */
 .mp_row {
-  background: var(--neutral);
+  background: var(--color6);
   border-radius: 5px;
   display: grid;
   grid-template-columns: 55px auto;
@@ -2482,19 +2512,30 @@ blockquote cite a {
 /*** AFFICHAGE D'UN MESSAGE PRIVÉ -- ***/
 
 .message {
-  background: var(--neutral);
-  border-radius: 5px;
-  display: grid;
-  grid-template-rows: max-content auto;
-  grid-template-columns: 220px auto;
+    background: var(--color6);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .message_infos {
-  grid-column: 1 / span 2;
-  border-bottom: 1px solid var(--neutralDark);
-  padding: 10px;
+    border-bottom: 1px solid var(--color1);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-bg {
+  background: var(--gradient);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.mp-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  gap: 5px;
 }
 
 .mp-icons {
@@ -2503,9 +2544,10 @@ blockquote cite a {
 }
 
 .message_profil {
-  padding: 10px;
-  border-right: 1px solid var(--neutralDark);
-  text-align: center;
+    padding: 10px;
+    text-align: center;
+    background: var(--gradient);
+    border-radius: 5px;
 }
 
 .message_content {
@@ -2683,10 +2725,11 @@ form[name="form_login"] .content {
   margin-left: -225px;
   top: 50%;
   margin-top: -125px;
-  background-color: var(--neutral);
+  background: var(--gradient);
   padding: 10px;
   border: var(--border);
   border-radius: 5px;
+  box-shadow: 0 0 5px gray;
 }
 
 
