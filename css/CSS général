@@ -630,6 +630,9 @@ summary {
   width: 80%;
   margin: 10px auto;
   clear: both;
+  background: var(--gradient);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 /* Image/avatar réduit */
@@ -2513,7 +2516,7 @@ blockquote cite a {
 
 .message {
     background: var(--color6);
-    border-radius: 3px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -2526,10 +2529,10 @@ blockquote cite a {
     justify-content: space-between;
 }
 
-.message-bg {
-  background: var(--gradient);
-  padding: 5px;
-  border-radius: 5px;
+.mp-wrapper {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .mp-container {
@@ -2547,7 +2550,7 @@ blockquote cite a {
     padding: 10px;
     text-align: center;
     background: var(--gradient);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .message_content {
