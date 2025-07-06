@@ -2519,14 +2519,24 @@ blockquote cite a {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 87%;
+}
+
+.message_from {
+    display: flex;
+    justify-content: center;
+    background: var(--color6);
+    border-radius: 10px;
+    margin-top: -15px;
 }
 
 .message_infos {
-    border-bottom: 1px solid var(--color1);
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    background: var(--color6);
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .mp-wrapper {
@@ -2553,8 +2563,14 @@ blockquote cite a {
     border-radius: 10px;
 }
 
+.message_profil img {
+  border: 5px solid var(--color6);
+  border-radius: 5px;
+}
+
 .message_content {
   padding: 25px;
+  height: 100%;
 }
 
 /****** ------------------------------------------------------------------------------
