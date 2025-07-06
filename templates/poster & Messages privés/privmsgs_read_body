@@ -53,11 +53,8 @@
               </div>
             </div>
     <div class="container">
-
-        <!-- Conteneur du message -->
-        <div class="message">
-
-            <!-- Conteneur des informations du message -->
+      
+                  <!-- Conteneur des informations du message -->
             <div class="message_infos">
 
                 <!-- De XX à XX, date -->
@@ -77,6 +74,9 @@
                 </ul>
 
             </div>
+
+        <!-- Conteneur du message -->
+        <div class="message">
 
             <!-- contenu du MP -->
             <div class="message_content postbody content">
