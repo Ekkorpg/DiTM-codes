@@ -290,7 +290,7 @@ body {
 /* Conteneur de toutes les sous-sections
  * comme les encadrés d'options, de rappel, etc... */
 .panel {
-  background: var(--gradient);
+  background: var(--colorcontainer);
   border: var(--border);
   border-radius: 5px;
   padding: 10px;
@@ -552,7 +552,7 @@ a.sceditor-button {
 /* Conteneur de la zone de texte */
 .sceditor-container iframe,
 .sceditor-container textarea {
-  background-color: var(--neutral) !important;
+  background-color: var(--color6) !important;
   /*ne pas supprimer*/
   width: 100% !important;
   margin: 0 !important;
@@ -1619,9 +1619,11 @@ a.groups:last-child {
 /* Bloc de description du forum */
 .forum-page_desc {
   margin: 0 0 20px;
-  background: var(--neutral);
+  background: var(--color6);
   border-radius: 5px;
   padding: 10px;
+  border: 5px solid var(--colorcontainer);
+  text-align: justify;
 }
 
 /* Conteneur sujet dans la liste */
