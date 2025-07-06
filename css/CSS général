@@ -19,6 +19,7 @@
   --color6: #fff;
   --colortitre: #fff;
   --coloracc: #cba6de;
+  --colorcontainer: #97acd0;
   --transparent: #f0f3fd;
   --gradient: linear-gradient(to right, var(--color1), var(--color2), var(--color4)50%, var(--color5));
   --shadow: 0 0 5px gray;
@@ -79,6 +80,7 @@
   --color5: #cec6c4;
   --color4: #fff;
   --coloracc: #453a47;
+  --colorcontainer: #212326;
   --colortitre: #d3d3dd;
   --transparent: #33373c;
   --gradient: linear-gradient(to right, var(--color1), var(--color3), var(--color1));
@@ -438,7 +440,7 @@ input:is([type="text"], [type="password"], .inputbox),
 textarea {
   border: none;
   border-radius: 5px;
-  background: var(--neutralDark);
+  background: var(--color2);
   font-size: var(--normal-size);
   color: var(--contrastLight) !important;
   padding: 8px 10px;
@@ -459,7 +461,7 @@ button {
   font-size: var(--normal-size);
   padding: 10px 15px !important;
   border-radius: 5px;
-  background: var(--color1);
+  background: var(--color2);
   color: var(--contrastLight);
   font-weight: 600;
   border: none;
@@ -600,7 +602,7 @@ body#sce_smilies_body {
 
 /* Contenur général qui sert généralement de fond et/ou de contour*/
 .container {
-  background: var(--gradient);
+  background: var(--colorcontainer);
   border-radius: 10px;
   padding: 10px;
 }
@@ -1121,7 +1123,7 @@ li.fa_separator {
   transition: 0.2s opacity ease;
   transform: translate(-50%, -50%);
   border-radius: 10px;
-  background: var(--neutral);
+  background: var(--colorcontainer);
   padding: 50px;
   box-shadow: var(--shadowBox);
 }
@@ -1193,8 +1195,9 @@ li.fa_separator {
   outline: none;
   background: var(--contrastLighter);
   border-radius: 4px;
-  padding: 0;
-  padding-left: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .monomer-close:hover {
@@ -1689,6 +1692,7 @@ a.groups:last-child {
   background: var(--color6);
   padding: 10px;
   border-radius: 5px;
+  flex: 1;
 }
 
 .topicslist-avatar-lastpost {
@@ -1772,7 +1776,7 @@ a.groups:last-child {
   display: flex;
   flex-direction: column;
   flex: 1; /* prend l’espace restant */
-  background: var(--color1);
+  background: var(--colorcontainer);
   padding: 10px;
   border-radius: 10px;
 }
@@ -1932,7 +1936,7 @@ button.rep-button .rep-nb {
     display: flex;
     flex-direction: column;
     width: 250px;
-    background-color: var(--color1);
+    background: var(--gradient);
     border-radius: 10px;
     padding: 20px;
     margin-right: 10px;
