@@ -159,6 +159,10 @@
   position: fixed;
 }
 
+.password-container img {
+  margin-left: 5px;
+}
+
 /*--- décoration de text ---*/
 titre {
   display: inline-block;
@@ -286,7 +290,7 @@ body {
 /* Conteneur de toutes les sous-sections
  * comme les encadrés d'options, de rappel, etc... */
 .panel {
-  background: var(--color6);
+  background: var(--gradient);
   border: var(--border);
   border-radius: 5px;
   padding: 10px;
@@ -2706,9 +2710,11 @@ form[name="form_login"]~.panel {
 }
 
 form[name="form_login"] .content {
-  display: grid;
-  justify-content: center;
-  justify-items: center;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    background: var(--color6);
+    padding: 5px;
 }
 
 /*** ------------------------------- ***/
