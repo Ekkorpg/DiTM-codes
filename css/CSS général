@@ -154,6 +154,9 @@
   --FAM-newMsgAnimation: color-mix(in srgb, var(--FAM-accentClr), transparent 20%);
 }
 
+blockquote {
+  margin: 0 50px!important;
+}
 
 .background {
   position: fixed;
@@ -1545,7 +1548,10 @@ a.groups:last-child {
 
 /* QEEL DITM */
 #newest_username a span{color:#fff!important;}
-#birthday_list br{display:none;}  
+#birthday_list br{display:none;} 
+#last_connected{
+  max-height: 10.5rem;
+}
 
 
 /****** ------------------------------------------------------------------------------
@@ -1988,7 +1994,7 @@ a.fa-mention {
 .presence.online {
   display: inline-block;
   position: relative;
-  background: var(--color2);
+  background: var(--color6);
   border-radius: 5px;
   padding: 0 5px;
   margin: 0 auto;
@@ -2084,6 +2090,7 @@ a.fa-mention {
   height: 100%;
   margin-top: 7px;
   border-radius: 6px;
+  max-width: 606px;
 }
 
 /* REPONSE RAPIDE --- */
@@ -2168,6 +2175,7 @@ a.fa-mention {
   width: 90%;
   margin: 0 auto;
   position: relative;
+  overflow-wrap: anywhere;
 }
 
 /* Contenu code, spoiler et hide*/
