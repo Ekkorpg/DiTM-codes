@@ -1,3 +1,96 @@
+:root {
+    color-scheme: light;
+    --header: url('https://i.imgur.com/O2kzD5S.jpeg');
+    
+    --color1: #d8dbe8;
+    --color2: #c4d0e2;
+    --color3: #cba6de;
+    --color4: #ccd6e7;
+    --color5: #97acd0;
+    --color6: #fff;
+    --colortitre: #fff;
+    --coloracc: #cba6de;
+    --colorcontainer: #97acd0;
+    --transparent: #f0f3fd;
+    --gradient: linear-gradient(to right, var(--color1), var(--color2), var(--color4)50%, var(--color5));
+    --shadow: 0 0 5px gray;
+    
+    --background: url('https://i.imgur.com/QZx41yd.jpeg');
+  
+    --neutral: #fffff;
+    --neutralDark: #98b1d8;
+    --neutralDarker: #dce3f4;
+  
+    --contrast: #171938;
+    --contrastLight: #232657;
+    --contrastLighter: #c3c8f3;
+  
+    --accentClr: #4b57c5;
+    --accentClrDark: #333c92;
+  
+    --textColor: #232657;
+    --textColorAccent: #000;
+  
+    --border: 1px solid var(--color1);
+  
+    --shadowBox: 0 0 20px #23265730;
+  
+    --little-size: 12px;
+    --normal-size: 14px;
+    --medium-size: 16px;
+    --large-size: 18px;
+    --title-size: 22px;
+  
+    --font: "Open Sans";
+    
+    --mainColor: #9d83b7;
+    --whiteBG: #FFFFFF; 
+    --back: #fafbfc;
+  }
+  
+  /* VARIABLES DU MODE INVERSE (ici sombre) */
+  [data-color-scheme="dark"] {
+    color-scheme: dark;
+    --header: url('https://i.imgur.com/kRLmcca.jpeg');
+  
+    --neutral: #3f4347;
+    --neutralDark: #0d0e0f;
+    --neutralDarker: #33373c;
+  
+    --contrast: #e5e5f0;
+    --contrastLight: #f4f4f4;
+    --contrastLighter: #40485e;
+  
+    --accentClr: #7583ff;
+    --accentClrDark: #333c92;
+    
+    --color1: #212326;
+    --color2: #32363b;
+    --color3: #33373c;
+    --color6: #354b4f;
+    --color5: #cec6c4;
+    --color4: #fff;
+    --coloracc: #453a47;
+    --colorcontainer: #212326;
+    --colortitre: #d3d3dd;
+    --transparent: #33373c;
+    --gradient: linear-gradient(to right, var(--color1), var(--color3), var(--color1));
+    --shadow: 0 0 5px black;
+    
+    --background:  url('https://i.imgur.com/hBoUARB.jpeg');
+    
+    --textColor: #c7c5cd;
+    --textColorAccent: #e5e5f0;
+  
+    --border: 1px solid #2b2e3b;
+  
+    --shadowBox: 0 0 20px var(--neutralDark);
+    
+    --mainColor: var(--color1);  
+    --whiteBG: #354b4f;
+    --back: #1e212a;
+  }
+
 /*--- PA ---*/
 .pa-container {
   display: flex;
@@ -11,7 +104,7 @@
 .pa-bottom {
   display: flex;
   flex-direction: row;
-  background: var(--color3);
+  background: var(--color1);
   border-radius: 10px;
   padding: 10px;
   gap: 5px;
@@ -40,7 +133,7 @@
 .pa-context,
 .pa-event,
 .pa-timeline {
-  background: var(--color1);
+  background: var(--color6);
   border-radius: 5px;
   text-align: justify;
   overflow: auto;
@@ -50,7 +143,7 @@
 .pa-intrigue {
   width: 100%;
   flex: 1;
-  background: var(--color1);
+  background: var(--color6);
   border-radius: 5px;
   scrollbar-width: none;
   text-align: justify;
@@ -76,7 +169,7 @@
 .pl-title,
 .pa-staff-title {
   display: inline-block;
-  background: var(--color4);
+  background: var(--color5);
   padding: 5px 60px;
   border-radius: 15px;
   width: auto;
@@ -149,7 +242,7 @@ select {
 
 lien_partenaire {
   display: inline-block;
-  background: var(--color1);
+  background: var(--color5);
   padding: 3px 5px;
   margin: 5px;
   border-radius: 15px;
@@ -191,7 +284,7 @@ lien_partenaire {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color1);
+  background: var(--color5);
   padding: 0 7px;
   border-radius: 10px;
   text-transform: uppercase;
@@ -206,7 +299,7 @@ lien_partenaire {
 .pa-lienrapide {
   display: flex;
   align-items: center;
-  background: var(--color1);
+  background: var(--color5);
   padding: 5px 10px;
   border-radius: 20px;
   box-shadow: 0 0 5px gray;
@@ -249,8 +342,8 @@ lien_partenaire {
 .tabs-icon {
   position: absolute;
   z-index: 3;
-  background: var(--color1);
-  border: 3px solid var(--color2);
+  background: var(--color6);
+  border: 3px solid var(--color5);
   border-radius: 5px;
   height: 90px;
   width: 60px;
@@ -280,7 +373,7 @@ lien_partenaire {
 .pa-timeline {
   display: flex;
   width: 245px;
-  background: var(--color1);
+  background: var(--color6);
   border-radius: 5px;
   flex-direction: column;
   text-align: justify;
@@ -310,7 +403,7 @@ lien_partenaire {
 .pa-meteo {
   display: flex;
   flex-direction: column;
-  background: var(--color1);
+  background: var(--color6);
   border-radius: 5px;
   height: 100px;
   width: 100%;
@@ -321,11 +414,16 @@ lien_partenaire {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color2);
+  background: var(--color5);
   border-radius: 3px 3px 0 0;
   font-size: 25px;
   height: 40px;
   width: 100%;
+}
+
+.title-underline {
+  border-bottom : 2px solid var(--color6);
+  margin-bottom: -18px;
 }
 
 .meteo-text {
@@ -342,4 +440,3 @@ lien_partenaire {
 .tab-content.active {
   display: flex;
 }
-
