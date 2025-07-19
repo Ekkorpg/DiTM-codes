@@ -1,13 +1,4 @@
-:root {
-  --color1: #5ba1b0;
-  --color2: #acd1d1;
-  --color3: #dce2e1;
-  --color4: #d8caae;
-  --color5: #b18f69;
-  --color6: #fff;
-  --gradient: linear-gradient(to right, var(--color1), var(--color2), var(--color4)50%, var(--color5));
-}
-
+/*--- PA ---*/
 .pa-container {
   display: flex;
   width: 890px;
@@ -54,6 +45,12 @@
   height: auto;
   background: var(--color1);
   border-radius: 5px;
+  scrollbar-width: none;
+  text-align: justify;
+}
+
+.pa-zone-text {
+  padding: 5px;
 }
 
 .pa-pl {
@@ -169,12 +166,15 @@ lien_partenaire {
   gap: 5px;
 }
 
-.pa-discord, .pa-prd {
+.pa-discord, .pa-prd, .staff-link {
   display: flex;
   align-items: center;
+  justify-content: center;
   background: var(--color1);
   padding: 0px 7px;
   border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 .pa-lienrapide {
@@ -197,15 +197,18 @@ lien_partenaire {
 
 }
 
-.pa-context, .pa-timeline {
+/*--- zone gauche ===*/
+.pa-context, .pa-event {
   display: flex;
   width: 345px;
   height: 185px;
   background: var(--color1);
   border-radius: 5px;
   overflow: auto;
+  flex-direction: column;
 }
 
+/*--- zone milieux ---*/
 .pa-zone-stafficon {
   display: flex;
   flex-direction: row;
@@ -216,29 +219,82 @@ lien_partenaire {
   width: 45px;
   height: 85px;
   background: var(--color1);
-}
-
-.pa-staff-icon img{
-  object-fit: cover;
-}
-
-.pa-tabs, .pa-event {
-  display: flex;
-  width: 245px;
-  height: 100px;
-  background: var(--color1);
   border-radius: 5px;
 }
 
-.pa-event {
-  height: 150px;
+.pa-staff-icon img, .tabs-icon img {
+  width: 45px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
+.tabs-icon img {
+  width: 60px !important;
+  height: 90px !important;
+}
+
+.pa-tabs, .pa-timeline {
+  display: flex;
+  width: 245px;
+  height: 150px;
+  background: var(--color1);
+  border-radius: 5px;
+  flex-direction: column;
+  scrollbar-width: none;
+  text-align: justify;
+}
+
+.tabs-title {
+  height: 40px !important;
+  font-size: 15px !important;
+  z-index: 1;
+  text-align: center;
+}
+
+.tabs-icon {
+  position: absolute;
+  z-index: 3;
+  border: 3px solid var(--color2);
+  margin: 10px 10px;
+  background: var(--color1);
+  height: 90px;
+  width: 60px;
+  border-radius: 5px;
+}
+
+.tabs-zone-text {
+  display: inline;
+  width: 160px;
+  padding: 5px;
+  margin-left: 76px;
+      text-align: center;
+}
+
+.tabs-title-text {
+  width: 160px;
+  margin-left: 76px;
+}
+
+.staff-link {
+  background: var(--color2)!important;
+  margin-top: 5px;
+}
+
+.pa-tabs {
+  height: 140px !important;
+}
+
+
+
+/*--- zone droit ---*/
 .pa-intrigue {
   width: 100%;
   flex: 1;
   background: var(--color1);
   border-radius: 5px;
+  scrollbar-width: none;
+  text-align: justify;
 }
 
 .pa-zone-date {
@@ -259,14 +315,14 @@ lien_partenaire {
   border-radius: 5px;
 }
 
-.meteo-title {
+.pa-box-title, .tabs-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
+  height: 40px;
   width: 100%;
   background: var(--color2);
-  border-radius: 5px 5px 0 0;
+  border-radius: 3px 3px 0 0;
   font-size: 25px;
 }
 
@@ -275,4 +331,8 @@ lien_partenaire {
   display: inline-block;
   text-align: center;
   font-size: 17px;
+}
+
+.pa-explication, .pa-context, .pa-timeline, .pa-event, .pa-intrigue {
+  overflow: auto;
 }
