@@ -1,6 +1,6 @@
 <div class="pa-container">
   <div class="pa-top">
-    <div class="pa-explication">
+    <div class="pa-explication"><div class="pa-box-title">à propos du forum</div><div class="pa-zone-text">nous sommes un forum city ésotérique basé on louisiane, dans la ville de la Nouvelle-Orléan. Le forum demande seulement un RP par mois et aucun nombre de mots n'est deamdner. nous sommes un forum city ésotérique basé on louisiane, dans la ville de la Nouvelle-Orléan. Le forum demande seulement un RP par mois et aucun nombre de mots n'est deamdner.nous sommes un forum city ésotérique basé on louisiane, dans la ville de la Nouvelle-Orléan. Le forum demande seulement un RP par mois et aucun nombre de mots n'est deamdner.</div>
     </div>
     <div class="pa-pl">
       <div class="pl-title">prédéfini</div>
@@ -34,17 +34,74 @@
     <div class="pa-lienrapide">contexte</div> <div class="pa-lienrapide">règlement</div><div class="pa-lienrapide">faceclaims</div><div class="pa-lienrapide">pré-lien</div><div class="pa-lienrapide">anexe</div><div class="pa-lienrapide">boutique</div><div class="pa-lienrapide">invité</div>
   </div>
   <div class="pa-bottom">
-    <div class="pa-zone-droite"><div class="pa-context"></div><div class="pa-timeline"></div></div>
+    <div class="pa-zone-droite"><div class="pa-context"><div class="pa-box-title">context</div><div class="pa-zone-text">context ici</div></div><div class="pa-event"><div class="pa-box-title">event</div><div class="pa-zone-text">aucun evénement n'est en cours pour le moment</div></div></div>
     <div class="pa-zone-staff">
       <div class="pa-staff-title">le staff</div>
-      <div class="pa-zone-stafficon"><div class="pa-staff-icon"></div><div class="pa-staff-icon"></div><div class="pa-staff-icon"></div><div class="pa-staff-icon"></div><div class="pa-staff-icon"></div></div>
-      <div class="pa-tabs"></div>
-      <div class="pa-event"></div>
+<div class="pa-zone-stafficon">
+  <div class="pa-staff-icon" data-tab="staff1"><img src="https://i.postimg.cc/QxnnMgWP/avawhisperer.png" alt="Staff 1" /></div>
+  <div class="pa-staff-icon" data-tab="staff2"><img src="https://i.postimg.cc/QxnnMgWP/avawhisperer.png" alt="Staff 2" /></div>
+  <div class="pa-staff-icon" data-tab="staff3"><img src="https://i.postimg.cc/QxnnMgWP/avawhisperer.png" alt="Staff 3" /></div>
+  <div class="pa-staff-icon" data-tab="staff4"><img src="https://i.postimg.cc/QxnnMgWP/avawhisperer.png" alt="Staff 3" /></div>
+  <div class="pa-staff-icon" data-tab="staff5"><img src="https://i.postimg.cc/QxnnMgWP/avawhisperer.png" alt="Staff 3" /></div>
+</div>
+
+<!-- Onglets (1 par staff) -->
+<div class="pa-tabs tab-content" id="staff1">
+  <div class="tabs-icon"><img src="https://i.postimg.cc/QxnnMgWP/avawhisperer.png" alt="" /></div>
+  <div class="tabs-title"><div class="tabs-title-text">Moonlight's Whispers<br />compte fondateur</div></div>
+  <div class="tabs-zone-text">présent.e·il&elle<br /><div class="staff-link">contact</div><div class="staff-link">profil</div></div>
+</div>
+<!-- tabs 2 -->
+<div class="pa-tabs tab-content" id="staff2">
+  <div class="tabs-icon"><img src="https://i.postimg.cc/QxnnMgWP/avawhisperer.png" alt="" /></div>
+  <div class="tabs-title"><div class="tabs-title-text">Second Staff<br />modérateur</div></div>
+  <div class="tabs-zone-text">présent·il<br /><div class="staff-link">contact</div><div class="staff-link">profil</div></div>
+</div>
+<!-- tabs 3 -->
+<div class="pa-tabs tab-content" id="staff3">
+  <div class="tabs-icon"><img src="https://i.postimg.cc/QxnnMgWP/avawhisperer.png" alt="" /></div>
+  <div class="tabs-title"><div class="tabs-title-text">Troisième Staff<br />admin</div></div>
+  <div class="tabs-zone-text">absent·il<br /><div class="staff-link">contact</div><div class="staff-link">profil</div></div>
+</div>
+<!-- tabs 4 -->
+<div class="pa-tabs tab-content" id="staff4">
+  <div class="tabs-icon"><img src="https://i.postimg.cc/QxnnMgWP/avawhisperer.png" alt="" /></div>
+  <div class="tabs-title"><div class="tabs-title-text">Tquatrième Staff<br />admin</div></div>
+  <div class="tabs-zone-text">absent·il<br /><div class="staff-link">contact</div><div class="staff-link">profil</div></div>
+</div>
+<!-- tabs 5 -->
+<div class="pa-tabs tab-content" id="staff5">
+  <div class="tabs-icon"><img src="https://i.postimg.cc/QxnnMgWP/avawhisperer.png" alt="" /></div>
+  <div class="tabs-title"><div class="tabs-title-text">Cinquième Staff<br />admin</div></div>
+  <div class="tabs-zone-text">absent·il<br /><div class="staff-link">contact</div><div class="staff-link">profil</div></div>
+</div>
+      <!----- timeline ----->
+      <div class="pa-timeline"><div class="pa-zone-text">XX.XX - début du projet</div></div>
     </div>
     <div class="pa-zone-gauche">
-      <div class="pa-intrigue"></div>
+      <div class="pa-intrigue"><div class="pa-box-title">intrigue</div><div class="pa-zone-text">aucun intrigue n'est en cours</div></div>
       <div class="pa-zone-date">juin 2025</div>
-      <div class="pa-meteo"><div class="meteo-title">météo</div><div class="meteo-text">min 13° - max 20°<br /> printemps</div></div>
+      <div class="pa-meteo"><div class="pa-box-title">météo</div><div class="meteo-text">min 13° - max 20°<br /> printemps</div></div>
     </div>
   </div>
 </div>
+
+<script>
+  const staffIcons = document.querySelectorAll('.pa-staff-icon');
+  const tabs = document.querySelectorAll('.tab-content');
+
+  staffIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      const tabId = icon.getAttribute('data-tab');
+
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
+
+  // Optionnel : activer le premier onglet au chargement
+  if (tabs.length) tabs[0].classList.add('active');
+</script>
