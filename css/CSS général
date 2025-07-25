@@ -17,9 +17,14 @@
     --color4: #ccd6e7;
     --color5: #97acd0;
     --color6: #fff;
+    --color7: #6181b8;
     --colortitre: #fff;
     --coloracc: #cba6de;
     --colorcontainer: #97acd0;
+  
+    --pacolor: #97acd0;
+    --patitle: #fff;
+  
     --transparent: #f0f3fd;
     --gradient: linear-gradient(to right, var(--color1), var(--color2), var(--color4)50%, var(--color5));
     --shadow: 0 0 5px gray;
@@ -41,6 +46,8 @@
     --textColorAccent: #000;
   
     --border: 1px solid var(--color1);
+    --roundborder: border-radius: 5px;
+    --roundbox: border-radius: 3px;
   
     --shadowBox: 0 0 20px #23265730;
   
@@ -76,11 +83,16 @@
     --color1: #212326;
     --color2: #32363b;
     --color3: #33373c;
-    --color6: #354b4f;
-    --color5: #cec6c4;
     --color4: #fff;
+    --color5: #cec6c4;
+    --color6: #354b4f;
+    --color7: #6181b8;
     --coloracc: #453a47;
     --colorcontainer: #212326;
+  
+    --pacolor: #32363b;
+    --patitle: #cec6c4;
+  
     --colortitre: #d3d3dd;
     --transparent: #33373c;
     --gradient: linear-gradient(to right, var(--color1), var(--color3), var(--color1));
@@ -611,7 +623,7 @@
   .container {
     background: var(--colorcontainer);
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
   }
   
   /* Barre de séparation */
@@ -782,6 +794,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 10px;
   }
   
   l#notif_list a {
@@ -795,68 +808,76 @@
       margin-top: 8px;
   }
   
-  /*--- MENU BIENVENUE ---*/
-  #fa_menulist {
-      width: 350px;
-  }
+   /*--- MENU BIENVENUE ---*/
+#fa_menulist {
+    position: relative;
+    padding: 0 0 10px 150px;
+}
+
+#fa_usermenu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--bg3);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
   
-  #fa_usermenu {
-      background: var(--bg3);
-      display: grid;
-      float: left;
-      padding: 15px;
-      text-align: center;
-      min-height: 260px
-  }
   
   #fa_usermenu td {
       color: var(--purewhite)
   }
   
-  #fa_usermenu img {
-      border-radius: 5px;
-      object-fit: cover;
-      object-position: center;
-      width: 120px;
-      height: 120px;
-      display: block;
-      margin-bottom: 10px;
-      border: 5px solid var(--colorcontainer);
-  }
+#fa_usermenu img {
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 0 10px 10px 0;
+    border: 5px solid var(--colorcontainer);
+}
   
-  #fa_menulist li {
-      line-height: 28px;
-      display: flex;
-      font-size: 13px;
-  }
+/* Liste des liens à droite */
+#fa_menulist li {
+    list-style: none;
+    font-size: 13px;
+    margin: 5px 0 !important;
+    padding-left: 10px;
+}
   
-  #fa_menulist li a {
-      font-size: var(--size2);
-      background: transparent
-  }
+/* Style des liens */
+#fa_menulist li a {
+    font-size: var(--size2);
+    background: transparent;
+    color: inherit;
+    text-decoration: none;
+}
   
   #fa_toolbar #fa_right .fa_separator {
       margin: 5px 0 5px 150px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   
-  #fa_ranktitle {
-      display: flex;
-      margin: 0px!important;
-      margin-bottom: 10px!important;
-      text-align: center;
-      background: var(--colorcontainer)!important;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-  }
+#fa_ranktitle {
+    margin-bottom: 10px !important;
+    background: var(--colorcontainer) !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    padding: 0px 1px;
+}
   
-  li.fa_separator {
-      width: 200px;
-      position: relative;
-      right: 0px;
-      border: 1px solid var(--color1)!important
-  }
+li.fa_separator {
+    width: 96%;
+    height: 1px;
+    background: var(--color1);
+}
   
   /*--- LISTE DES NOTIFICATIONS ---*/
   #notif_list {
@@ -884,8 +905,8 @@
   
   #fa_toolbar #fa_right #notif_list li a.delete {
       position: absolute;
-      top: -4px;
-      right: 9px;
+      top: -3px;
+      right: -1px;
   }
   
   #fa_toolbar #fa_right #notif_list li a.delete:before {
@@ -1292,7 +1313,7 @@
     justify-content: center;
     background-image: var(--gradient);
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
     margin: 0 0 10px 0;
   }
   
@@ -1311,7 +1332,7 @@
     gap: 10px;
     background-image: var(--gradient);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 10px;
   }
   
@@ -1359,7 +1380,7 @@
     width: 200px;
     height: 100px;
     background-color: var(--color6);
-    border-radius: 5px;
+    border-radius: 3px;
   }
   
   /*image statut du forum */
@@ -1367,7 +1388,7 @@
     width: 50px;
     height: 100px;
     background-color: var(--color6);
-    border-radius: 5px;
+    border-radius: 3px;
     object-fit: cover;
   }
   /*description du forum*/
@@ -1379,7 +1400,7 @@
       overflow: auto;
       align-self: center;
       background-color: var(--color6);
-      border-radius: 5px;
+      border-radius: 3px;
       padding: 10px;
       /* Scroll invisible */
       scrollbar-width: none;         /* Firefox */
@@ -1395,7 +1416,7 @@
     width: 100px;
     height: 100px;
     background-color: var(--color6);
-    border-radius: 5px;
+    border-radius: 3px;
   }
   
   .forum_avatar img {
@@ -1404,7 +1425,7 @@
     background: var(--color5);
     object-fit: cover;
     object-position: center;
-    border-radius: 5px;
+    border-radius: 3px;
   }
   
   /* dernier message*/
@@ -1412,7 +1433,7 @@
     width: 180px;
     height: 100px;
     background-color: var(--color6);
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 10px;
   }
   
@@ -1518,6 +1539,10 @@
   }
   
   .qeel-middle {}
+
+  #qeel_credits{
+    font-size: 13px;
+  }
   
   /*X connectés :: 1 membre, 0 invisible, 0 invité*/
   #total_users {}
@@ -1621,14 +1646,14 @@
   
   .container-forum {
     background: var(--gradient);
-    border-radius: 10px;
+    border-radius: 5px;
   }
   
   /* Bloc de description du forum */
   .forum-page_desc {
     margin: 0 0 20px;
     background: var(--color6);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
     border: 5px solid var(--colorcontainer);
     text-align: justify;
@@ -1642,7 +1667,6 @@
   }
   
   .topicslist_row {
-     background: var(--);
       border-radius: 5px;
       padding: 10px;
       margin-bottom: 10px;
@@ -1662,7 +1686,7 @@
       width: 65px;
       height: 65px;
       background: var(--color6);
-      border-radius: 5px;
+      border-radius: 3px;
   }
   
   .topicslist-img img{
@@ -1673,7 +1697,7 @@
     width: 458px;
       background: var(--color6);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
   }
   
   /*titre du sujet*/
@@ -1705,7 +1729,7 @@
       text-align: right;
     background: var(--color6);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     flex: 1;
   }
   
@@ -1718,14 +1742,14 @@
       object-position: center;
       height: 65px;
       background: var(--color6);
-      border-radius: 5px;
+      border-radius: 3px;
       padding: 2px;
   }
   
   .topicslist-lastpost {
       background: var(--color6);
       padding: 10px;
-      border-radius: 5px;
+      border-radius: 3px;
       width: 187px;
       height: 65px;
       font-size: 13px;
@@ -1734,7 +1758,7 @@
   .topicslist-description {
     padding: 5px;
     background: var(--color6);
-    border-radius: 5px;
+    border-radius: 3px;
     width: 100%;
   }
   
@@ -1792,7 +1816,7 @@
     flex: 1; /* prend l’espace restant */
     background: var(--colorcontainer);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
   }
   
   
@@ -1876,7 +1900,7 @@
     display: flex;
     align-items: center;
     background-color: var(--color6);
-    border-radius: 5px; 
+    border-radius: 3px; 
   }
   
   .post_date {
@@ -1951,22 +1975,22 @@
       flex-direction: column;
       width: 250px;
       background: var(--gradient);
-      border-radius: 10px;
+      border-radius: 5px;
       padding: 20px;
-      margin-right: 10px;
+      margin-right: 5px;
       align-items: center;
   }
   
   .post_avatar img {
       width: 200px;
       height: 320px;
-      border-radius: 10px;
+      border-radius: 5px;
       border: 4px solid var(--color6);
   }
   
   .profile_title {
     background-color: var(--color6);
-    border-radius: 20px;
+    border-radius: 10px;
     width: 230px;
   }
   
@@ -2005,7 +2029,7 @@
       flex-direction: column;
       align-items: flex-start;
       background-color: var(--color6);
-      border-radius: 10px;
+      border-radius: 5px;
       padding: 10px;
       font-size: 14px;
       color: #000;
@@ -2090,8 +2114,8 @@
     background-color: var(--color6);
     height: 100%;
     margin-top: 7px;
-    border-radius: 6px;
-    max-width: 606px;
+    border-radius: 3px;
+    max-width: 611px;
   }
   
   /* REPONSE RAPIDE --- */
@@ -2237,6 +2261,7 @@
     display: block;
     margin-left: -20px;
     font-style: normal;
+    font-weight: 700;
   }
   
   /* Citation pseudo */
@@ -2254,95 +2279,128 @@
    ****** MEMBRES ------------------------------------------------------ ******/
   
   /*** ------------------------------- ***/
-  /*** PAGE DE PROFIL ---------------- ***/
-  
-  .user_profile {
-    background: var(--neutral);
-    border-radius: 5px;
-    display: grid;
-    grid-template-columns: max-content auto;
-    padding: 10px;
-    grid-gap: 20px;
-  }
-  
-  .profile_avatar {
-    width: 200px;
-  }
-  
-  .profile_infos {}
-  
-  .profile_contact {
-    display: flex;
-    gap: 5px;
-    float: right;
-  }
-  
-  .profile_content {
-    height: 265px;
-    overflow: auto;
-  }
-  
-  .profile_field {
-    margin: 10px 0;
-    display: grid;
-    grid-template-columns: 135px auto;
-    grid-gap: 10px;
-  }
-  
-  .profile_field label,
-  .profile_field label>span {
-    font-weight: 600;
-    color: var(--link);
-  }
-  
-  .profile_field field {
-    position: relative;
-  }
-  
-  .profile_admin {
-    text-align: center;
-    margin: 10px 0 0;
-  }
-  
-  /* Bouton "suivre le membre" */
-  .followBtn {
-    background: var(--neutral);
-    border: 1px solid var(--neutralDark);
-    border-radius: 5px;
-    font-weight: 600;
-    margin: 0;
-    font-size: 14px;
-  }
-  
-  .followBtn::before {
-    top: 1px;
-    position: relative;
-    color: var(--accentClr);
-    margin-right: 5px;
-  }
-  
-  /* Bouton édition d'un champ de profil */
-  .ajax-profil_edit {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0px;
-  }
-  
-  /* Bouton édition d'un champ de profil */
-  .ajax-profil_edit {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: -15px;
-  }
-  
-  /* Bouton validation des modifications */
-  .ajax-profil_valid {
-    cursor: pointer;
-    margin-left: 4px;
-    vertical-align: middle;
-  }
+/*** PAGE DE PROFIL ---------------- ***/
+
+.user_profile {
+  background: var(--neutral);
+  border-radius: 5px;
+}
+
+.profile_content {
+  height: 265px;
+  overflow: auto;
+}
+
+.profile_field {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 135px auto;
+  grid-gap: 10px;
+}
+
+.profile_field label,
+.profile_field label>span {
+  font-weight: 600;
+  color: var(--link);
+}
+
+.profile_field field {
+  position: relative;
+}
+
+.profile_admin {
+  text-align: center;
+  margin: 10px 0 0;
+}
+
+.profile_btn{
+  background-color:var(--transparent);
+  color:var(--color7);
+}
+
+.profile_link_tooltip_trigger:hover .profile_btn, .profile_btn:hover{
+  background-color: var(--color7);
+  color:var(--transparent);
+}
+
+.profile_link_tooltip{
+  background: var(--color7);
+  color: var(--transparent);
+  opacity: 0;
+  left: 100%;
+  top: 50%;
+  z-index: 1;
+  transform: translate(0px, -50%);
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+.profile_link_tooltip_trigger:hover .profile_link_tooltip{
+  opacity: 1;
+}
+
+.profile_link_tooltip_trigger a{
+  width: 62px;
+  height: 62px;
+}
+
+#profile_liens a{
+  display: none;
+}
+
+.profile_link_tooltip_trigger:hover svg, #profile_liens a:hover svg {
+  animation: hithere 3s ease infinite; /* Augmente la durée totale de l'animation */
+}
+
+@keyframes hithere {
+  0% { transform: scale(1); } /* Ajouté pour définir le point de départ */
+  20% { transform: scale(1.2); } /* 30% de 3s = 0.9s (environ 0.9s pour l'animation) */
+  26%, 40% { transform: rotate(-20deg) scale(1.2); } /* 40% de 3s = 1.2s */
+  33% { transform: rotate(20deg) scale(1.2); } /* 50% de 3s = 1.5s */
+  46% { transform: rotate(0deg) scale(1.2); } /* 70% de 3s = 2.1s */
+  66% { transform: scale(1); } /* Environ 2 secondes pour l'animation */
+  100% { transform: scale(1); } /* Les 34% restants (environ 1s) sont un délai */
+}
+
+/* Bouton "suivre le membre" */
+.followBtn {
+  background: var(--neutral);
+  border: 1px solid var(--neutralDark);
+  border-radius: 5px;
+  font-weight: 600;
+  margin: 0;
+  font-size: 14px;
+}
+
+.followBtn::before {
+  top: 1px;
+  position: relative;
+  color: var(--accentClr);
+  margin-right: 5px;
+}
+
+/* Bouton édition d'un champ de profil */
+.ajax-profil_edit {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+/* Bouton édition d'un champ de profil */
+.ajax-profil_edit {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+/* Bouton validation des modifications */
+.ajax-profil_valid {
+  cursor: pointer;
+  margin-left: 4px;
+  vertical-align: middle;
+}
   
   /*** ------------------------------- ***/
   /*** WOMBAT PROFILS EN POP UP ---- ***/
@@ -2930,3 +2988,143 @@
   
   tw, .tw{filter: blur(3px); }
   tw:hover, .tw:hover{filter: blur(0px); }
+
+
+/*** ------------------------------- ***/
+/*** CHATBOX ----------------------- ***/
+#chatbox_bottom{
+  height: 370px !important;
+}
+
+#ditm_chatbox + .panel{
+  padding: 0;
+  background: none;
+}
+
+html:not(#min-width), html:not(#min-width) body{
+  height: 100%;
+}
+
+#chatbox_header{
+  border-radius: .25rem .25rem 0 0;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color5);
+  margin-bottom: 5px;
+  height: 9%;
+  min-height: 40px;
+}
+
+#chatbox_header a{
+  color: var(--transparent);
+}
+
+#chatbox_main_options, #chatbox_members ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#chatbox_main_options:after{
+  clear:both;
+}
+
+#chatbox_main_options li{
+  float: left;
+}
+
+#chatbox_members{
+  float: left;
+  width: 20%;
+  padding-left: 10px;
+}
+
+#chatbox_members h4{
+  margin: 4px 0;
+}
+
+#chatbox_members h4:first-of-type{
+  margin-top: 0;
+}
+
+#chatbox{
+  float: left;
+  width: 80%;
+  height: 70%;
+  overflow: auto;
+  padding-right: 10px;
+  margin-bottom: 5px;
+}
+
+#chatbox p{margin: 3px 0;}
+
+#chatbox_footer{
+  clear: both;
+  width: 100%;
+  background: var(--color5);
+  padding: 10px;
+  height: 9%!important;
+  min-height: 60px;
+  position: fixed;
+  bottom: 0;
+  border-radius: 0 0 .25rem .25rem;
+}
+
+#chatbox_footer .right-box:nth-of-type(2){
+  margin-top: 11px;
+  display: flex;
+}
+
+#chatbox_footer .right-box:nth-of-type(2) *{
+  background: var(--transparent);
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
+
+#divcolor{line-height: inherit!important;}
+
+#divcolor-preview{
+  height: 4px!important;
+}
+
+#chatbox_footer input{
+  padding: 17.1px 10px;
+  border-radius: .25rem 0 0 .25rem;
+  margin-left: 5px;
+}
+
+#chatbox_footer input:focus{
+  border: 0;
+}
+
+#chatbox_footer button{
+  border-radius: 0 .25rem .25rem 0;
+  cursor: pointer;
+}
+
+#help-button{display: none!important;}
+
+#chatbox_messenger_form{
+  display: flex!important;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.pa-top, .pa-bottom {
+  border-radius: 5px!important;
+}
+
+.pa-explication, .pa-context, .pa-event, .pa-timeline, .pa-tabs, .pa-timeline, .pa-staff-icon img, .tabs-icon, .tabs-icon img,  {
+  border-radius: 3px!important;
+}
+
+.tooltipster-content {height: 109px;}
+
+.tooltipster-content  img {margin-right: 6px;}
+
+.preview_avatar img {height: 93px; margin-right: 19px;}
+
+.preview_infos {width: none;}
